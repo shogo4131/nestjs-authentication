@@ -12,10 +12,10 @@ export class AuthController {
     return this.authService.signup(dto);
   }
 
-  //   @Post('signin')
-  //   signin() {
-  //     this.authService.signin();
-  //   }
+  @Post('signin')
+  signin(@Body() dto: AuthDto): Promise<Token> {
+    return this.authService.signin(dto);
+  }
 
   //   @Post('logout')
   //   logout() {
